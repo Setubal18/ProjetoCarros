@@ -17,9 +17,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
-from Carros.views import *
+from Carros.views import listar_veiculo
 
 urlpatterns = [
-                path('^veiculo/listar$', listar_veiculo, name="listar_veiculo"),
+                path('veiculo/lista/', listar_veiculo, name="listar_veiculo"),
                 path('admin/', admin.site.urls),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
