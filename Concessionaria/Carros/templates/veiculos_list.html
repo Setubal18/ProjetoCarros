@@ -58,4 +58,18 @@ Listagem de Veículos
     </div>
     {% endfor %}
 </div>
+<br>
+<div class="pagination">
+     <span class="step-links">
+         {% if lista.has_previous %}
+             <a href="?page={{ lista.previous_page_number }}">anterior</a>
+         {% endif %}
+         <span class="current">
+             Página {{ lista.number }} de {{ lista.paginator.num_pages }}.
+         </span>
+          {% if lista.has_next %}
+             <a href="?page={{ lista.next_page_number }}">proxima</a>
+         {% endif %}
+     </span>
+ </div>
 {% endblock content %}
