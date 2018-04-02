@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+{% block title %}
+Listagem de Veículos
+{% endblock title %}
+{% block content %}
+<div class="row">
+    {% for veiculo in lista %}
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <a href="#">
+                <img src="{{veiculo.foto_capa.url}}" style="width:100%">
+                <div class="caption">
+                    <p>{{veiculo.modelo}} - {{veiculo.ano}} -
+                        R${{veiculo.preco|intcomma}}</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

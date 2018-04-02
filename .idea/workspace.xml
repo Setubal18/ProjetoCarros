@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7a3622c-be93-445f-9472-1dfb9a560cdf" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Concessionaria/Carros/templates/veiculos_list.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/ProjetoCarros.iml" afterPath="$PROJECT_DIR$/.idea/ProjetoCarros.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,12 +16,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Concessionaria/Carros/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Concessionaria/Carros/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="veiculos_list.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Concessionaria/Carros/templates/veiculos_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,6 +84,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -69,6 +101,7 @@
         <option value="$PROJECT_DIR$/Concessionaria/Concessionaria/urls.py" />
         <option value="$PROJECT_DIR$/Concessionaria/Carros/admin.py" />
         <option value="$PROJECT_DIR$/Concessionaria/Carros/models.py" />
+        <option value="$PROJECT_DIR$/Concessionaria/Carros/templates/veiculos_list.html" />
       </list>
     </option>
   </component>
@@ -135,6 +168,13 @@
               <item name="Concessionaria" type="462c0819:PsiDirectoryNode" />
               <item name="Carros" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ProjetoCarros" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetoCarros" type="462c0819:PsiDirectoryNode" />
+              <item name="Concessionaria" type="462c0819:PsiDirectoryNode" />
+              <item name="Carros" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -147,6 +187,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Blog/blogDevMedia/models.py" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -188,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522630951388</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Antes dos templates">
+      <created>1522631315072</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1522631315072</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -226,7 +274,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="FK concertado, e banco criado" />
     <MESSAGE value="Erros Arrumandos.&#10;Models registrados" />
-    <option name="LAST_COMMIT_MESSAGE" value="Erros Arrumandos.&#10;Models registrados" />
+    <MESSAGE value="Antes dos templates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Antes dos templates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -292,6 +341,24 @@
         <state relative-caret-position="153">
           <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concessionaria/Carros/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concessionaria/Carros/templates/veiculos_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
