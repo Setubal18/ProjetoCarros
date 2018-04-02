@@ -22,7 +22,7 @@ class Proprietario(models.Model):
 
 class Acessorio(models.Model):
     ESTADO_CHOICES = (
-        ("otimo", "otimo"),
+        ("otimo", "Otimo"),
         ("bom", "Bom"),
         ("ruim", "Ruim"),
     )
