@@ -19,16 +19,18 @@ class Proprietario(models.Model):
     def __str__(self):
         return self.nome
 
- class Acessorio(models.Model):
-       ESTADO_CHOICES = (
-           ("ótimo", "Ótimo"),
-           ("bom", "Bom"),
-          ("ruim", "Ruim"),
-       )
-       descricao = models.CharField(max_length=50, null=False)
-       estado = models.CharField(max_length=20, choices=ESTADO_CHOICES)
-       def __str__(self):
-           return self.descricao
+
+class Acessorio(models.Model):
+    ESTADO_CHOICES = (
+        ("otimo", "otimo"),
+        ("bom", "Bom"),
+        ("ruim", "Ruim"),
+    )
+    descricao = models.CharField(max_length=50, null=False)
+    estado = models.CharField(max_length=20, choices=ESTADO_CHOICES)
+
+    def __str__(self):
+        return self.descricao
 
 
 class Veiculo(models.Model):
@@ -53,9 +55,8 @@ class Veiculo(models.Model):
     foto_capa = models.ImageField(upload_to='images')
     tipo = models.CharField(max_length=10, choices=TIPO_CHOICES)
 
-    proprietario = models.ForeignKey(Proprietario)
+    proprietario = models.ForeignKey(Proprietario,on_delete=models.CASCADE,blank=False)
     acessorios = models.ManyToManyField(Acessorio)
-
 
     def __str__(self):
         return self.modelo
