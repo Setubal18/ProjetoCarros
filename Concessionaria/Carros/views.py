@@ -64,6 +64,7 @@ def listar_veiculo(request,categoria):
     query = request.GET.get("busca", '')
     page = request.GET.get('page', '')
     ordenar = request.GET.get("ordenar", '')
+
     if query:
         if categoria != "todos":
             veiculo = Veiculo.objects.filter(modelo__icontains=query,tipo=categoria)
@@ -83,7 +84,7 @@ def listar_veiculo(request,categoria):
                     veiculo = Veiculo.objects.all()
             veiculo = Paginator(veiculo, 2)
             veiculo = veiculo.page(page)
-        except PageNotAnInteger:\
+        except PageNotAnInteger:
             veiculo = veiculo.page(1)
         except EmptyPage:
             veiculo = paginator.page(paginator.num_pages)
