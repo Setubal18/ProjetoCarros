@@ -17,10 +17,13 @@ from Carros.views import listar_veiculo
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 
 urlpatterns = [
-                  path('veiculo/lista/', listar_veiculo, name="listar_veiculo"),
+                  path("veiculo/lista/", listar_veiculo, name="listar_veiculo"),
+                  # path("veiculo/lista/todos", listar_veiculo, name="listar_veiculo"),
+                  # path("veiculo/lista/motos", listar_veiculo, name="listar_veiculo"),
+                  # path("veiculo/lista/carros", listar_veiculo, name="listar_veiculo"),
+                  path('veiculo/listar/<str:categoria>/', listar_veiculo, name='listar_veiculo'),
                   path('admin/', admin.site.urls),
-                  path('veiculo/listar/(?P<categoria>[\w\-]+)/', listar_veiculo, name='listar_veiculo'),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
