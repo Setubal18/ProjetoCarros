@@ -1,7 +1,9 @@
 from django.core import paginator
-from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from django.shortcuts import render, get_object_or_404
+
 from .models import Veiculo
-from django.shortcuts import render
+
 
 # Create your views here.
 # Listar todos os veiculos
@@ -60,23 +62,23 @@ from django.shortcuts import render
 #      veiculos = {'lista': veiculo}
 #      return render(request, 'veiculos_list.html', veiculos)
 
-def listar_veiculo(request,categoria):
+def listar_veiculo(request, categoria):
     query = request.GET.get("busca", '')
     page = request.GET.get('page', '')
     ordenar = request.GET.get("ordenar", '')
 
     if query:
         if categoria != "todos":
-            veiculo = Veiculo.objects.filter(modelo__icontains=query,tipo=categoria)
+            veiculo = Veiculo.objects.filter(modelo__icontains=query, tipo=categoria)
         else:
             veiculo = Veiculo.objects.filter(modelo__icontains=query)
     else:
         try:
             if categoria != "todos":
                 if ordenar:
-                        veiculo = Veiculo.objects.filter(tipo=categoria).order_by(ordenar)
+                    veiculo = Veiculo.objects.filter(tipo=categoria).order_by(ordenar)
                 else:
-                        veiculo = Veiculo.objects.filter(tipo=categoria)
+                    veiculo = Veiculo.objects.filter(tipo=categoria)
             else:
                 if ordenar:
                     veiculo = Veiculo.objects.all().order_by(ordenar)
@@ -90,3 +92,8 @@ def listar_veiculo(request,categoria):
             veiculo = paginator.page(paginator.num_pages)
     veiculos = {'lista': veiculo}
     return render(request, 'veiculos_list.html', veiculos)
+
+
+def perfil_veiculo(request, pk):
+    veiculo = get_object_or_404(Veiculo, pk=pk)
+    return render(request, "perfil_veiculo.html", {'veiculo': veiculo})
