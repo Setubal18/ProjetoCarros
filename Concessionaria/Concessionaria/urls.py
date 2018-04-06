@@ -21,9 +21,6 @@ from django.urls import path
 
 urlpatterns = [
                   path("veiculo/lista/", listar_veiculo, name="listar_veiculo"),
-                  # path("veiculo/lista/todos", listar_veiculo, name="listar_veiculo"),
-                  # path("veiculo/lista/motos", listar_veiculo, name="listar_veiculo"),
-                  # path("veiculo/lista/carros", listar_veiculo, name="listar_veiculo"),
                   path('veiculo/listar/<str:categoria>/', listar_veiculo, name='listar_veiculo'),
                   path('admin/', admin.site.urls),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
